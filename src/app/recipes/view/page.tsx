@@ -198,7 +198,7 @@ function RecipeDetailContent() {
               <img
                 alt={recipe.title}
                 className="w-full h-[350px] object-cover rounded-xl shadow-xl"
-                src={recipe.image_url}
+                src={getAssetPath(recipe.image_url)}
               />
             ) : (
               <div className="w-full h-[350px] bg-surface-container-low rounded-xl flex items-center justify-center">

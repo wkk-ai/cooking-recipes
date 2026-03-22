@@ -200,7 +200,7 @@ export default function RecipesPage() {
                   <img
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     alt={recipe.title}
-                    src={recipe.image_url || getAssetPath("/placeholder.jpg")}
+                    src={getAssetPath(recipe.image_url || "/placeholder.jpg")}
                   />
                   <div className="absolute bottom-4 left-4">
                     <span className="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">
