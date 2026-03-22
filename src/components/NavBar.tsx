@@ -12,7 +12,7 @@ interface RecipeSuggestion {
 
 const navLinks = [
   { href: "/", label: "Receitas" },
-  { href: "/add-new", label: "Adicionar Nova" },
+  { href: "/add-new", label: "Adicionar Receita" },
 ];
 
 export default function NavBar() {
@@ -80,7 +80,8 @@ export default function NavBar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 font-headline text-lg">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || (link.href === "/" && pathname.startsWith("/recipes"));
+            const normalizedPath = pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
+            const isActive = normalizedPath === link.href || (link.href === "/" && normalizedPath.startsWith("/recipes"));
             return (
               <Link
                 key={link.href}
