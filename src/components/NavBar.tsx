@@ -11,8 +11,7 @@ interface RecipeSuggestion {
 }
 
 const navLinks = [
-  { href: "/", label: "Início" },
-  { href: "/recipes", label: "Minhas Receitas" },
+  { href: "/", label: "Receitas" },
   { href: "/add-new", label: "Adicionar Nova" },
 ];
 
@@ -81,7 +80,7 @@ export default function NavBar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 font-headline text-lg">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = pathname === link.href || (link.href === "/" && pathname.startsWith("/recipes"));
             return (
               <Link
                 key={link.href}

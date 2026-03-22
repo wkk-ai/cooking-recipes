@@ -216,7 +216,7 @@ function AddRecipeForm() {
       {/* ─── Header ─── */}
       <div className="mb-16">
         <h1 className="font-headline text-5xl md:text-6xl text-on-surface mb-4 leading-tight">
-          {idValue ? "Refinar sua Narrativa" : "Curar uma Nova Entrada"}
+          {idValue ? "Refinar sua Narrativa" : "Adicionar Nova Receita"}
         </h1>
         <p className="font-body text-secondary text-lg max-w-2xl italic">
           {idValue
