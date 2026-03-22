@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ─── Color Palette (Material Design 3 Tonal System) ─── */
+  --color-primary: #994127;
+  --color-primary-container: #b8583d;
+  --color-primary-fixed: #ffdbd1;
+  --color-primary-fixed-dim: #ffb5a0;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #fffbff;
+  --color-on-primary-fixed: #3b0900;
+  --color-on-primary-fixed-variant: #7d2c14;
+
+  --color-secondary: #576247;
+  --color-secondary-container: #d8e4c2;
+  --color-secondary-fixed: #dbe7c5;
+  --color-secondary-fixed-dim: #bfcbaa;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #5b664b;
+  --color-on-secondary-fixed: #151e09;
+  --color-on-secondary-fixed-variant: #3f4a31;
+
+  --color-tertiary: #7b542b;
+  --color-tertiary-container: #966c41;
+  --color-tertiary-fixed: #ffdcbd;
+  --color-tertiary-fixed-dim: #f0bd8b;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #fffbff;
+  --color-on-tertiary-fixed: #2c1600;
+  --color-on-tertiary-fixed-variant: #623f18;
+
+  --color-background: #fcf9f2;
+  --color-surface: #fcf9f2;
+  --color-surface-bright: #fcf9f2;
+  --color-surface-dim: #dcdad3;
+  --color-surface-tint: #9c4329;
+  --color-surface-variant: #e5e2db;
+  --color-surface-container: #f0eee7;
+  --color-surface-container-low: #f6f3ec;
+  --color-surface-container-high: #ebe8e1;
+  --color-surface-container-highest: #e5e2db;
+  --color-surface-container-lowest: #ffffff;
+
+  --color-on-surface: #1c1c18;
+  --color-on-surface-variant: #56423d;
+  --color-on-background: #1c1c18;
+
+  --color-outline: #89726c;
+  --color-outline-variant: #dcc1ba;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-inverse-surface: #31312c;
+  --color-inverse-primary: #ffb5a0;
+  --color-inverse-on-surface: #f3f0ea;
+
+  /* ─── Typography ─── */
+  --font-headline: "Newsreader", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  /* ─── Border Radius ─── */
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+/* ─── Base Styles ─── */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+}
+
+h1, h2, h3, .serif-italic {
+  font-family: var(--font-headline);
+}
+
+/* ─── Signature Gradient (Primary CTA) ─── */
+.signature-gradient {
+  background: linear-gradient(135deg, #994127 0%, #b8583d 100%);
+}
+
+/* ─── Material Symbols ─── */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ─── Recipe Shadow (ambient, per DESIGN.md) ─── */
+.recipe-shadow {
+  box-shadow: 0 24px 40px rgba(86, 66, 61, 0.05);
+}
+
+/* ─── Selection ─── */
+::selection {
+  background-color: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed);
+}

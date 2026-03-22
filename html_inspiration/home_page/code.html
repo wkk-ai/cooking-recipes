@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#31312c",
+              "inverse-primary": "#ffb5a0",
+              "secondary-fixed-dim": "#bfcbaa",
+              "on-surface-variant": "#56423d",
+              "surface-container-low": "#f6f3ec",
+              "secondary-fixed": "#dbe7c5",
+              "on-primary-container": "#fffbff",
+              "outline-variant": "#dcc1ba",
+              "surface-variant": "#e5e2db",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#d8e4c2",
+              "on-secondary-fixed-variant": "#3f4a31",
+              "surface-container-highest": "#e5e2db",
+              "surface": "#fcf9f2",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#966c41",
+              "primary-fixed-dim": "#ffb5a0",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#ffdcbd",
+              "outline": "#89726c",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#2c1600",
+              "on-secondary-container": "#5b664b",
+              "tertiary": "#7b542b",
+              "surface-dim": "#dcdad3",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#623f18",
+              "on-secondary-fixed": "#151e09",
+              "background": "#fcf9f2",
+              "tertiary-fixed-dim": "#f0bd8b",
+              "surface-container-high": "#ebe8e1",
+              "on-background": "#1c1c18",
+              "surface-container": "#f0eee7",
+              "primary-container": "#b8583d",
+              "on-error-container": "#93000a",
+              "on-surface": "#1c1c18",
+              "inverse-on-surface": "#f3f0ea",
+              "primary": "#994127",
+              "surface-tint": "#9c4329",
+              "on-tertiary-container": "#fffbff",
+              "on-primary-fixed": "#3b0900",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#576247",
+              "surface-bright": "#fcf9f2",
+              "primary-fixed": "#ffdbd1",
+              "on-primary": "#ffffff",
+              "on-primary-fixed-variant": "#7d2c14"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      h1, h2, h3, .serif-italic {
+        font-family: 'Newsreader', serif;
+      }
+      .signature-texture {
+        background: linear-gradient(135deg, #994127 0%, #b8583d 100%);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-[#fcf9f2] dark:bg-stone-900">
+<nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-[#994127] dark:text-[#b8583d]">The Editorial Hearth</div>
+<div class="hidden md:flex items-center gap-10 font-serif font-bold text-lg dark:text-stone-100">
+<a class="text-[#994127] dark:text-[#b8583d] font-bold border-b-2 border-[#994127] pb-1" href="#">Home</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#994127] hover:bg-stone-100/50 dark:hover:bg-stone-800 transition-colors duration-300" href="#">My Recipes</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#994127] hover:bg-stone-100/50 dark:hover:bg-stone-800 transition-colors duration-300" href="#">Add New</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center bg-surface-container-highest px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm font-body px-2 w-48 text-on-surface" placeholder="Search curated recipes..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-primary p-2 rounded-full hover:bg-surface-container-low transition-all duration-300" data-icon="account_circle">account_circle</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-6 sm:px-12">
+<!-- Featured Recipe Hero (Asymmetric Layout) -->
+<section class="mt-12 mb-24">
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+<div class="w-full lg:w-3/5 order-2 lg:order-1 relative">
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-secondary-container rounded-full -z-10 opacity-40"></div>
+<img alt="Gourmet Salad with roasted vegetables and fresh herbs" class="w-full h-[500px] object-cover rounded-xl shadow-sm transform lg:-rotate-2" data-alt="Gourmet Salad with roasted vegetables and fresh herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlyDwb9kq0gOL8p3lRQggjyREUf35beul43xRsZlbWcBOIk-L1-GWNyaQBgtKINPsVcfUk3ics8IVfPPQEgdQWeoq_isKkvzskjwxcWaNrQMisvugHUXhDqngst17pVYTErwZ0JNS0HdeTP8560lRxL0ZYmxKs6jCX8GJYLFypBPk1RsMO72TatrcVoFCYtBItTOPUVWoHjcceIMfSDhVBJAHubwlRhcPoWVpuMU_44TpxuAYMYyXgN9kivOw6zsmWCiAZgJft0CDe"/>
+<div class="absolute bottom-6 right-6 backdrop-blur-md bg-surface/80 p-6 rounded-xl border border-outline-variant/20 hidden sm:block">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="timer">timer</span>
+<span class="font-label text-xs uppercase tracking-widest text-secondary font-bold">Prep: 25 Mins</span>
+</div>
+<p class="font-headline text-lg italic text-on-surface">"The secret is in the balsamic reduction."</p>
+</div>
+</div>
+<div class="w-full lg:w-2/5 order-1 lg:order-2">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary font-extrabold mb-4 block">Seasonal Feature</span>
+<h1 class="text-5xl md:text-7xl font-headline text-on-background leading-[1.1] mb-6">Heirloom Harvest <span class="serif-italic italic font-light">Warm Salad</span></h1>
+<p class="text-on-surface-variant font-body text-lg leading-relaxed mb-8">
+                        A curation of slow-roasted root vegetables, toasted pine nuts, and a drizzle of rosemary-infused honey. Simple ingredients, elevated by technique.
+                    </p>
+<button class="signature-texture text-on-primary px-10 py-4 rounded-full font-label font-bold tracking-wide shadow-lg shadow-primary/20 hover:scale-95 transition-transform duration-150">
+                        View Full Recipe
+                    </button>
+</div>
+</div>
+</section>
+<!-- Category Bento Tabs -->
+<section class="mb-20">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-4xl font-headline text-on-background mb-2">The Pantry Chapters</h2>
+<p class="text-outline font-body">Browse by intention and dietary preference.</p>
+</div>
+<div class="flex gap-3">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label text-sm font-bold">Quick Meals</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm font-medium hover:bg-secondary-container transition-colors">Vegetarian</button>
+<button class="bg-surface-container-low text-on-surface-variant px-6 py-2 rounded-full font-label text-sm font-medium hover:bg-secondary-container transition-colors">Baking</button>
+</div>
+</div>
+<!-- Recipe Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Recipe Card 1 -->
+<article class="group">
+<div class="relative overflow-hidden rounded-xl mb-6 aspect-[4/5] bg-surface-container-low">
+<img alt="Creamy avocado bowl with seeds" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Creamy avocado bowl with seeds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPLATDV5thdlXb8KcLIHJqL63eYRqsj7wDDGlIHtuVKelrrRUbw6c_I7h4Apt7UPdvhwyiR6fAhWLKEWV42cgEovyoK8B6wqni2NXlXGMXmKmdYKfXb-rIuLtUuqGDaC_rB-xMatn35NsiYEGIl4_JlSXDPe0NgeI5pkpteDaFRZXlGrhY4xU1cZsSnx9ybhyBxQuVQY1-4llb37nRm6A6UycZmMVwutTfOahxpSsT3ZyXTJtne3qVYkzYS3D-OUNrkswTOAGVM-iw"/>
+<div class="absolute top-4 left-4">
+<div class="bg-secondary-fixed/90 backdrop-blur-sm text-on-secondary-fixed px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-tighter">15 Mins</span>
+</div>
+</div>
+</div>
+<div class="px-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline text-on-surface">Spiced Avocado &amp; Green Pea Smash</h3>
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors" data-icon="favorite">favorite</button>
+</div>
+<p class="text-on-surface-variant font-body text-sm line-clamp-2 leading-relaxed">A refreshing morning staple served on sourdough with toasted sesame seeds and chili flakes.</p>
+</div>
+</article>
+<!-- Recipe Card 2 -->
+<article class="group translate-y-8">
+<div class="relative overflow-hidden rounded-xl mb-6 aspect-[4/5] bg-surface-container-low">
+<img alt="Mediterranean Quinoa Salad" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Mediterranean Quinoa Salad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByrlNo7bI_jC3nsEB_F7EJfGMJBdyoWntot5tK9gIvC-AHqdHLXd1RToulAhPUC5ocaEwYZeK0w29fx0M841VkrVkxcogjhnsHkoPjjnJW7n8HKh8wustmd6wukcP3ky5GFJjRtFnB9Q1_0oRsqBgJfZRAiNlwP7vFhm2-s2p7cO92Eif6OSPIE1RQ22BtRsVunGrZATbwII0fwmXjFlfGVpYWc4dJz2wZSKiSyAZqC05SkIh9VO5E2Mh3ClK18Uc2mXCoi8LEIppV"/>
+<div class="absolute top-4 left-4">
+<div class="bg-secondary-fixed/90 backdrop-blur-sm text-on-secondary-fixed px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="eco">eco</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-tighter">Vegetarian</span>
+</div>
+</div>
+</div>
+<div class="px-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline text-on-surface">The Sun-Drenched Quinoa Bowl</h3>
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors" data-icon="favorite">favorite</button>
+</div>
+<p class="text-on-surface-variant font-body text-sm line-clamp-2 leading-relaxed">Bright lemons, fresh parsley, and Kalamata olives create a Mediterranean masterpiece.</p>
+</div>
+</article>
+<!-- Recipe Card 3 -->
+<article class="group">
+<div class="relative overflow-hidden rounded-xl mb-6 aspect-[4/5] bg-surface-container-low">
+<img alt="Artisan Sourdough Bread" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artisan Sourdough Bread" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHr4Cba0H2L7qF0XgEY0uryzg06JkaILH1ibhHuMyGg40dU2HmrT6ausbGms7za0IL99647Wpnw8bjg1WYG9U_vdmeoI3LugJP6CZ7NvdwA3bse9MrAJPt1TyM6lr7GpBn4OKUKiKR7odYBwWpFfyzK97mr7tH4GR6BiWG6mJrQXfFq3HMkxu1wmUWdr0UO9jWW_TqhMcpGJi8KlYi_8dNdR0lzYEuJqa2nyD2esIy6geGMOcdKKCPsbG6LDNIaEOrGZIM3Zvh7jSI"/>
+<div class="absolute top-4 left-4">
+<div class="bg-secondary-fixed/90 backdrop-blur-sm text-on-secondary-fixed px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="bakery_dining">bakery_dining</span>
+<span class="font-label text-[10px] font-bold uppercase tracking-tighter">Baking</span>
+</div>
+</div>
+</div>
+<div class="px-2">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl font-headline text-on-surface">Heritage Rye Artisan Sourdough</h3>
+<button class="material-symbols-outlined text-outline hover:text-primary transition-colors" data-icon="favorite">favorite</button>
+</div>
+<p class="text-on-surface-variant font-body text-sm line-clamp-2 leading-relaxed">Master the art of the 24-hour ferment for a crust that sings and a crumb that melts.</p>
+</div>
+</article>
+</div>
+</section>
+<!-- Newsletter Section (Tonal Layering) -->
+<section class="bg-surface-container-low rounded-xl p-12 mb-24 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="auto_stories">auto_stories</span>
+<h2 class="text-4xl font-headline text-on-background mb-4">Letters from the Kitchen</h2>
+<p class="text-on-surface-variant font-body mb-8">Join 12,000+ home curators receiving weekly reflections on seasonal ingredients and culinary techniques.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 bg-surface-container-lowest border-none rounded-lg px-6 py-4 font-body focus:ring-2 focus:ring-primary/20 text-on-surface" placeholder="Enter your email address" type="email"/>
+<button class="bg-tertiary text-on-tertiary px-8 py-4 rounded-lg font-label font-bold hover:opacity-90 transition-opacity">Subscribe</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-[#f6f3ec] dark:bg-stone-900 border-t border-stone-200/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6 w-full max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-serif text-xl text-[#994127]">The Editorial Hearth</div>
+<p class="font-sans text-sm tracking-wide dark:text-stone-400 text-stone-500">© 2024 The Editorial Hearth. Curated with intention.</p>
+</div>
+<div class="flex gap-8 font-sans text-sm tracking-wide">
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#576247] transition-opacity" href="#">About Our Kitchen</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#576247] transition-opacity" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#576247] transition-opacity" href="#">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#576247] transition-opacity" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-stone-400" data-icon="potted_plant">potted_plant</span>
+<span class="material-symbols-outlined text-stone-400" data-icon="restaurant">restaurant</span>
+</div>
+</div>
+</footer>
+</body></html>

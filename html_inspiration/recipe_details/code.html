@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Editorial Hearth - Detailed Recipe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#31312c",
+              "inverse-primary": "#ffb5a0",
+              "secondary-fixed-dim": "#bfcbaa",
+              "on-surface-variant": "#56423d",
+              "surface-container-low": "#f6f3ec",
+              "secondary-fixed": "#dbe7c5",
+              "on-primary-container": "#fffbff",
+              "outline-variant": "#dcc1ba",
+              "surface-variant": "#e5e2db",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#d8e4c2",
+              "on-secondary-fixed-variant": "#3f4a31",
+              "surface-container-highest": "#e5e2db",
+              "surface": "#fcf9f2",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#966c41",
+              "primary-fixed-dim": "#ffb5a0",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#ffdcbd",
+              "outline": "#89726c",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#2c1600",
+              "on-secondary-container": "#5b664b",
+              "tertiary": "#7b542b",
+              "surface-dim": "#dcdad3",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#623f18",
+              "on-secondary-fixed": "#151e09",
+              "background": "#fcf9f2",
+              "tertiary-fixed-dim": "#f0bd8b",
+              "surface-container-high": "#ebe8e1",
+              "on-background": "#1c1c18",
+              "surface-container": "#f0eee7",
+              "primary-container": "#b8583d",
+              "on-error-container": "#93000a",
+              "on-surface": "#1c1c18",
+              "inverse-on-surface": "#f3f0ea",
+              "primary": "#994127",
+              "surface-tint": "#9c4329",
+              "on-tertiary-container": "#fffbff",
+              "on-primary-fixed": "#3b0900",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#576247",
+              "surface-bright": "#fcf9f2",
+              "primary-fixed": "#ffdbd1",
+              "on-primary": "#ffffff",
+              "on-primary-fixed-variant": "#7d2c14"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .recipe-shadow {
+            box-shadow: 0 24px 40px rgba(86, 66, 61, 0.05);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #994127 0%, #b8583d 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-[#fcf9f2] dark:bg-stone-900">
+<nav class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-serif italic text-[#994127] dark:text-[#b8583d]">The Editorial Hearth</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#994127] transition-colors duration-300" href="#">Home</a>
+<a class="text-[#994127] dark:text-[#b8583d] font-bold border-b-2 border-[#994127] pb-1" href="#">My Recipes</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#994127] transition-colors duration-300" href="#">Add New</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-100/50 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[#994127]">search</span>
+</button>
+<button class="p-2 hover:bg-stone-100/50 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[#994127]">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-6 lg:px-12 py-12">
+<!-- Hero Section: Asymmetric Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<div class="space-y-6">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest font-bold">Classic Comfort</span>
+<h1 class="font-headline text-5xl lg:text-7xl leading-tight text-on-surface">Heirloom Roasted Tomato &amp; Basil Soup</h1>
+<p class="text-lg text-on-surface-variant max-w-md font-headline italic">A deep, concentrated flavor profile achieved through slow-roasting seasonal vine tomatoes with whole garlic cloves and fresh thyme.</p>
+<div class="flex flex-wrap gap-6 pt-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<div>
+<p class="text-[10px] uppercase tracking-wider text-outline font-bold">Prep Time</p>
+<p class="font-bold text-on-surface">15 mins</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">oven_gen</span>
+<div>
+<p class="text-[10px] uppercase tracking-wider text-outline font-bold">Cook Time</p>
+<p class="font-bold text-on-surface">45 mins</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">bar_chart</span>
+<div>
+<p class="text-[10px] uppercase tracking-wider text-outline font-bold">Difficulty</p>
+<p class="font-bold text-on-surface">Intermediate</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">group</span>
+<div>
+<p class="text-[10px] uppercase tracking-wider text-outline font-bold">Servings</p>
+<p class="font-bold text-on-surface">4 Portions</p>
+</div>
+</div>
+</div>
+<div class="pt-8">
+<button class="signature-gradient text-on-primary px-8 py-4 rounded-full font-bold shadow-lg hover:scale-95 transition-transform duration-150 flex items-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                            Start Cooking
+                        </button>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2">
+<div class="relative">
+<div class="absolute -top-6 -left-6 w-full h-full bg-surface-container-highest rounded-xl -z-10 translate-x-4 translate-y-4"></div>
+<img alt="Roasted tomato soup in a rustic ceramic bowl" class="w-full h-[500px] object-cover rounded-xl shadow-xl" data-alt="Rustic ceramic bowl of roasted tomato soup with basil garnish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRXUSWAMcJDkLFT93TEa2fd-QFQ9z6PalgnqLO1BLPUgp375WeGTiTOY_zWvwO2dxhgzfHrWJxTyJH74d3bfJHT7szIgWtdweuiTMA_cyDsbPms7SzTKR5RQUFfarg4zJdLPTxbTlpL_LjRiytVZXKi_0Km1R2RQfer4DBHx6uli8RqLz1oqGTusFKEMaQlv3jmaGDscxNbthbmqr5Wlp2zzVq3KCDpOCiTnmopWxS1pIHvlXilI58uKMmIEL29-WRgXpGdctlc9bv"/>
+</div>
+</div>
+</section>
+<!-- Main Recipe Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Sidebar: Ingredients -->
+<aside class="lg:col-span-4">
+<div class="bg-surface-container-low p-8 rounded-xl sticky top-32">
+<h2 class="font-headline text-3xl mb-8 border-b border-outline-variant/20 pb-4">Ingredients</h2>
+<ul class="space-y-6">
+<li class="flex items-start justify-between group">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">3 lbs Vine-ripened tomatoes, halved</span>
+<span class="font-bold text-secondary">1.4 kg</span>
+</li>
+<li class="flex items-start justify-between group">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Whole garlic bulb, top sliced off</span>
+<span class="font-bold text-secondary">1 unit</span>
+</li>
+<li class="flex items-start justify-between group">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Extra virgin olive oil</span>
+<span class="font-bold text-secondary">1/4 cup</span>
+</li>
+<li class="flex items-start justify-between group">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Fresh basil leaves</span>
+<span class="font-bold text-secondary">1 cup</span>
+</li>
+<li class="flex items-start justify-between group">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Vegetable stock</span>
+<span class="font-bold text-secondary">500 ml</span>
+</li>
+<li class="flex items-start justify-between group">
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Heavy cream (optional)</span>
+<span class="font-bold text-secondary">60 ml</span>
+</li>
+</ul>
+<div class="mt-12 p-6 bg-surface-container-highest rounded-lg">
+<h4 class="font-label text-xs font-bold uppercase tracking-widest text-primary mb-3">Chef's Tip</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed italic">"For a smokier profile, roast the tomatoes until the skins are slightly charred."</p>
+</div>
+</div>
+</aside>
+<!-- Instructions & Notes -->
+<div class="lg:col-span-8 space-y-16">
+<section>
+<h2 class="font-headline text-4xl mb-12">The Method</h2>
+<div class="space-y-12">
+<!-- Step 1 -->
+<div class="flex gap-8 group">
+<div class="flex-shrink-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-on-primary font-headline text-xl">01</span>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold text-on-surface">Roast the Foundation</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg">Preheat your oven to 400°F (200°C). Arrange the tomatoes on a large parchment-lined baking sheet. Place the garlic bulb in the center. Drizzle generously with olive oil and season with sea salt and cracked pepper.</p>
+<div class="bg-surface-container-low p-4 rounded-xl inline-flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">timer</span>
+<span class="font-label text-sm font-semibold">40 Minutes at 400°F</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-8 group">
+<div class="flex-shrink-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-on-primary font-headline text-xl">02</span>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold text-on-surface">Extract the Essence</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg">Once the tomatoes are soft and slightly caramelized, remove from the oven. Carefully squeeze the roasted garlic cloves out of their skins directly onto the pan. The garlic should be soft and buttery.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-8 group">
+<div class="flex-shrink-0">
+<span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-on-primary font-headline text-xl">03</span>
+</div>
+<div class="space-y-4">
+<h3 class="text-xl font-bold text-on-surface">Blend and Simmer</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg">Transfer the contents of the pan (including the juices) into a high-speed blender. Add fresh basil and vegetable stock. Blend until velvety smooth. Pour into a pot and simmer for 5 minutes to marry the flavors.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="border-t border-outline-variant/30 pt-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-3xl">Personal Notes &amp; Reviews</h2>
+<button class="text-primary font-bold flex items-center gap-2 hover:underline">
+<span class="material-symbols-outlined">edit_note</span>
+                            Add your own note
+                        </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container-low rounded-xl recipe-shadow">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed-dim flex items-center justify-center text-on-tertiary-fixed font-bold">EM</div>
+<div>
+<p class="text-sm font-bold">Eleanor Miller</p>
+<p class="text-[10px] text-outline uppercase tracking-tighter">Verified Cook</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm italic leading-relaxed">"I added a pinch of red pepper flakes during the roasting process for a little heat. Pairs beautifully with a sourdough grilled cheese."</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl recipe-shadow">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed-dim flex items-center justify-center text-on-secondary-fixed font-bold">JH</div>
+<div>
+<p class="text-sm font-bold">Julian Hayes</p>
+<p class="text-[10px] text-outline uppercase tracking-tighter">Home Chef</p>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm italic leading-relaxed">"The roasted garlic is the secret here. Don't skip it! I also substituted the cream for coconut milk for a vegan alternative."</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 bg-[#f6f3ec] dark:bg-stone-900 border-t border-stone-200/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6 w-full max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-serif text-xl text-[#994127] mb-2">The Editorial Hearth</span>
+<p class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-400">© 2024 The Editorial Hearth. Curated with intention.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#576247] font-sans text-sm tracking-wide transition-opacity" href="#">About Our Kitchen</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#576247] font-sans text-sm tracking-wide transition-opacity" href="#">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-500 hover:text-[#576247] font-sans text-sm tracking-wide transition-opacity" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

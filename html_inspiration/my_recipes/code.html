@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Recipes | The Editorial Hearth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#31312c",
+              "inverse-primary": "#ffb5a0",
+              "secondary-fixed-dim": "#bfcbaa",
+              "on-surface-variant": "#56423d",
+              "surface-container-low": "#f6f3ec",
+              "secondary-fixed": "#dbe7c5",
+              "on-primary-container": "#fffbff",
+              "outline-variant": "#dcc1ba",
+              "surface-variant": "#e5e2db",
+              "on-tertiary": "#ffffff",
+              "secondary-container": "#d8e4c2",
+              "on-secondary-fixed-variant": "#3f4a31",
+              "surface-container-highest": "#e5e2db",
+              "surface": "#fcf9f2",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#966c41",
+              "primary-fixed-dim": "#ffb5a0",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#ffdcbd",
+              "outline": "#89726c",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#2c1600",
+              "on-secondary-container": "#5b664b",
+              "tertiary": "#7b542b",
+              "surface-dim": "#dcdad3",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#623f18",
+              "on-secondary-fixed": "#151e09",
+              "background": "#fcf9f2",
+              "tertiary-fixed-dim": "#f0bd8b",
+              "surface-container-high": "#ebe8e1",
+              "on-background": "#1c1c18",
+              "surface-container": "#f0eee7",
+              "primary-container": "#b8583d",
+              "on-error-container": "#93000a",
+              "on-surface": "#1c1c18",
+              "inverse-on-surface": "#f3f0ea",
+              "primary": "#994127",
+              "surface-tint": "#9c4329",
+              "on-tertiary-container": "#fffbff",
+              "on-primary-fixed": "#3b0900",
+              "surface-container-lowest": "#ffffff",
+              "secondary": "#576247",
+              "surface-bright": "#fcf9f2",
+              "primary-fixed": "#ffdbd1",
+              "on-primary": "#ffffff",
+              "on-primary-fixed-variant": "#7d2c14"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Plus Jakarta Sans", "sans-serif"],
+              "label": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #994127 0%, #b8583d 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar from Shared Components JSON -->
+<header class="w-full top-0 sticky z-50 bg-[#fcf9f2] dark:bg-stone-900">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-[#994127] dark:text-[#b8583d]">The Editorial Hearth</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#994127] transition-colors duration-300" href="#">Home</a>
+<a class="text-[#994127] dark:text-[#b8583d] font-bold border-b-2 border-[#994127] pb-1" href="#">My Recipes</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#994127] transition-colors duration-300" href="#">Add New</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800 transition-colors duration-300 rounded-full">
+<span class="material-symbols-outlined text-[#994127]" data-icon="search">search</span>
+</button>
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800 transition-colors duration-300 rounded-full">
+<span class="material-symbols-outlined text-[#994127]" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-8 pt-12">
+<!-- Editorial Header Section -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-secondary mb-3 block">Personal Collection</span>
+<h1 class="font-headline text-5xl md:text-6xl font-bold text-on-surface leading-tight">My Recipes</h1>
+<p class="mt-4 text-on-surface-variant text-lg max-w-lg leading-relaxed">
+                        A curated archive of your culinary journeys, from heirloom family secrets to modern pantry experiments.
+                    </p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-6 py-3 bg-secondary-container text-on-secondary-container rounded-full font-label text-sm font-semibold transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                        Filters
+                    </button>
+<button class="flex items-center gap-2 px-8 py-3 signature-gradient text-on-primary rounded-full font-label text-sm font-bold shadow-lg shadow-primary/20 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                        New Recipe
+                    </button>
+</div>
+</div>
+</section>
+<!-- Search & Category Ribbon -->
+<section class="mb-12">
+<div class="bg-surface-container-low rounded-2xl p-4 flex flex-col lg:flex-row gap-4 items-center">
+<div class="relative w-full lg:w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border-none rounded-xl text-sm focus:ring-2 focus:ring-primary/20 placeholder:text-outline" placeholder="Search your library..." type="text"/>
+</div>
+<div class="h-8 w-px bg-outline-variant hidden lg:block mx-2"></div>
+<div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 w-full no-scrollbar">
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-primary text-on-primary text-xs font-bold font-label">All Collections</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-semibold font-label hover:bg-outline-variant/30 transition-colors">Slow Cooks</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-semibold font-label hover:bg-outline-variant/30 transition-colors">Spring Greens</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-semibold font-label hover:bg-outline-variant/30 transition-colors">Heritage Baking</button>
+<button class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-semibold font-label hover:bg-outline-variant/30 transition-colors">Quick Weeknights</button>
+</div>
+</div>
+</section>
+<!-- Recipe Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Recipe Card 1 -->
+<div class="group relative flex flex-col">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Rustic autumn salad with roasted squash and seeds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEQUu_AnQZOk_1OYCKaxD1euRc52IGB5lwEezsXAClVzvNnPzQ26JeqNythAc41hth0HlOK010E75atIGOD_8ZuyT5DYOHjRVI4UBgPxoDT-JeHjeSLMkZORdXt4iSXdPt0B1njt0f8KyPg74LNvHknQiAbcYt7nXp-OhlCG0DJYjs-pSEyH3gpm7P1DL7UyOddEYHPF_ZsSu5U1z8wxx72crOADnyLVDcDFzYeD2MvbuZYKr5UsoZFEc0B82kDnJlHJUjw2f5Revy"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">35 MIN</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold group-hover:text-primary transition-colors">Harvest Root Salad</h3>
+<p class="font-label text-xs text-on-surface-variant mt-1 uppercase tracking-wider">Seasonal Greens • Easy</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Recipe Card 2 (Offset/Asymmetric style) -->
+<div class="group relative flex flex-col lg:mt-12">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Balanced bowl with salmon, avocado, and brown rice" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsBpBM2R6EdVzgl0kqmyPubeRKEoBoPg28Fo-O1ObsnUItuHDTqtrTWnjZurRq_6TDOd4h0aMSJx7wLmpjkaozri0wCI_3lhmc_QjacGdH8CGytEpje9X7nZJw7WXwNOcxPwBLfY4rTGi2ARZN0iTAyFjvq5_DYXp4bjqSArVqhjnJTSwVyuNkNWJu28LfOVlV03ipjSBwewxvQT5UpzXyCvUjxMFMmSEJQqZf-JUWr71WfsWy3D8jscxd1NZnsFzNlPhghc85YHz5"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-outline shadow-sm hover:scale-110 transition-transform hover:text-primary">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">20 MIN</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold group-hover:text-primary transition-colors">Seared Miso Salmon</h3>
+<p class="font-label text-xs text-on-surface-variant mt-1 uppercase tracking-wider">High Protein • Quick</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Recipe Card 3 -->
+<div class="group relative flex flex-col">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Fresh vegetable medley with quinoa and herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALCF6wKrDdqbBur_qFXWeh0fvu0ahCUkIuMYbbJlkOtODwqUViRnde9PeeVYyke7R8xVBA0O5OqkKW2f0Tvz-thC6OgLLfVCPy2sz5hVs129dMpxsuEs2KHC7AYNWeJuX7bRzrHclLZXexr5kN7r2o66HCgRBjr9YEmJvRPejo8BO6USuOk8M-2x4BM6FDpgIvsZfcHkVOoQ7ca36qNhEXNEKxGhdLxH3aHCcMpJaVLXvP2htUCNX-z58bVSfvQfMAtR2z3_gh73m9"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">15 MIN</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold group-hover:text-primary transition-colors">Green Goddess Quinoa</h3>
+<p class="font-label text-xs text-on-surface-variant mt-1 uppercase tracking-wider">Vegan • Light</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Recipe Card 4 -->
+<div class="group relative flex flex-col lg:-mt-12">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Decadent chocolate cake with layers of ganache" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt_DvbMYq5I8SfV18v4IMxAnertKSjpY0TrSalKstPYUAfqoD4TOpZKpGC7asha8Zw3LO8gWrSCUF0TscnZr_mFwkJuL7J_oDhrpL95S6ATIPxVJW0ewdmlqv9lXnFQcGHqyPYlvD0FZU06Sx2eZOiaAlQLP7JvBMtRez1fxF8PRml14KwEOWAzwjfrd4J0ajjgxJtEydpWsO_IQzl1Zx8v13tbB-6mCaVyzUWokVfYg-ebUlshX_lHjM_8Z-LE1Sqc030hnWaRrKf"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-outline shadow-sm hover:scale-110 transition-transform hover:text-primary">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">1 HR</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold group-hover:text-primary transition-colors">Midnight Ganache Cake</h3>
+<p class="font-label text-xs text-on-surface-variant mt-1 uppercase tracking-wider">Baking • Intermediate</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Recipe Card 5 -->
+<div class="group relative flex flex-col">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Homemade pasta with cherry tomatoes and basil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvEG1fbE07mF3GKnfC4NH5i2WIFKUV7uXrZHFOaF3U2dKlCtvP-cMlMR8NQMW1WPNrkPyuDzrsoI2CnHc4W_KiSkxtVFvGPaA8kcFKPy261WO1Y-RQlfchoIUSByr2HVH0VWmH_50RFcCpn-_iJzB-OAMBK8en3FBIG2BDItMxAnogrIC2Alw_HVBWEV2aGIp4-z0ZVJtpvP9YgHP4S5QXWhG4f9kT7BOTRh2znsKk27BNoX4k17UJHW6rYa-ucv9LUUSb_uJATu3P"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">45 MIN</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold group-hover:text-primary transition-colors">Hand-Rolled Tagliatelle</h3>
+<p class="font-label text-xs text-on-surface-variant mt-1 uppercase tracking-wider">Italian • Expert</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+<!-- Recipe Card 6 -->
+<div class="group relative flex flex-col lg:mt-12">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-4 relative bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Moroccan tagine with chickpeas and apricots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB4-zdxhHMIjyteoGQq-bq1ZdOSagftP-nTSQ2Y7T2C_9FcxXHnDrzDUikOCqQm231QpWqkKUtwi_vz7SElheMKFrvyUZNC85BuYssp_CLXoioHTsb6XKEF6Js3VC1GI3V8bwd49JvhGY8ytE-IFc3t2CtMpXv7TjB7hmPcKZSVcIT-9VQV7INowtBIuOetn7bKZsmWOUrZOm5lwjkIOUr4l_WGrbAEKi9NWQrobZ5wzTkympDRLZm3cbgsoE07NuVFAVdKYMLOxW5"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-outline shadow-sm hover:scale-110 transition-transform hover:text-primary">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">2 HR</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline text-2xl font-bold group-hover:text-primary transition-colors">Chickpea &amp; Apricot Tagine</h3>
+<p class="font-label text-xs text-on-surface-variant mt-1 uppercase tracking-wider">Slow Cook • Vegan</p>
+</div>
+<button class="text-outline hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Load More Section -->
+<div class="mt-24 mb-12 flex flex-col items-center">
+<div class="w-full h-px bg-surface-container-high mb-8"></div>
+<button class="px-10 py-4 border border-outline-variant text-on-surface-variant font-label text-sm font-bold rounded-full hover:bg-surface-container-low transition-colors duration-300">
+                Reveal More Archives
+            </button>
+</div>
+</main>
+<!-- Footer from Shared Components JSON -->
+<footer class="w-full mt-20 bg-[#f6f3ec] dark:bg-stone-900 border-t border-stone-200/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6 w-full max-w-7xl mx-auto">
+<div class="font-serif text-xl text-[#994127]">The Editorial Hearth</div>
+<div class="flex gap-8">
+<a class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-500 hover:text-[#576247] transition-opacity" href="#">About Our Kitchen</a>
+<a class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-500 hover:text-[#576247] transition-opacity" href="#">Privacy Policy</a>
+<a class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-500 hover:text-[#576247] transition-opacity" href="#">Terms of Service</a>
+<a class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-500 hover:text-[#576247] transition-opacity" href="#">Contact</a>
+</div>
+<div class="font-sans text-sm tracking-wide text-stone-500 dark:text-stone-400">© 2024 The Editorial Hearth. Curated with intention.</div>
+</div>
+</footer>
+</body></html>
