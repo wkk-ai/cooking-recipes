@@ -6,23 +6,35 @@ import { supabase } from "@/lib/supabase";
 import { Recipe } from "@/lib/types";
 import { getAssetPath } from "@/lib/utils";
 
-const categories = ["Refeições Rápidas", "Vegetariano", "Confeitaria"];
-
 export default function HomePage() {
   const [featuredRecipes, setFeaturedRecipes] = useState<Recipe[]>([]);
   const [categoryRecipes, setCategoryRecipes] = useState<Recipe[]>([]);
+  const [categories, setCategories] = useState<string[]>([]);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
-      // Fetch random featured recipes (up to 3)
       const { data: allRecipes } = await supabase
         .from("recipes")
-        .select("*")
-        .limit(20);
+        .select("*");
 
       if (allRecipes && allRecipes.length > 0) {
+        // Generate dynamic categories based on all recipes
+        const counts: Record<string, number> = {};
+        allRecipes.forEach((r) => {
+          if (r.category) {
+            counts[r.category] = (counts[r.category] || 0) + 1;
+          }
+        });
+
+        const sortedCats = Object.entries(counts)
+          .filter(([_, count]) => count > 0)
+          .sort((a, b) => b[1] - a[1])
+          .map(([name]) => name);
+
+        setCategories(sortedCats);
+
         // Shuffle and pick up to 3
         const shuffled = [...allRecipes].sort(() => Math.random() - 0.5);
         setFeaturedRecipes(shuffled.slice(0, 1));
