@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { Recipe } from "@/lib/types";
+import { getAssetPath } from "@/lib/utils";
 
 const categories = ["Refeições Rápidas", "Vegetariano", "Confeitaria"];
 
@@ -72,7 +73,7 @@ export default function HomePage() {
               <img
                 alt={hero.title}
                 className="w-full h-[333px] object-cover rounded-xl shadow-sm transform lg:-rotate-2"
-                src={hero.image_url || "/placeholder.jpg"}
+                src={hero.image_url || getAssetPath("/placeholder.jpg")}
               />
               <div className="absolute bottom-6 right-6 backdrop-blur-md bg-surface/80 p-6 rounded-xl border border-outline-variant/20 hidden sm:block">
                 <div className="flex items-center gap-2 mb-2">
@@ -169,7 +170,7 @@ export default function HomePage() {
                 <img
                   alt={recipe.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  src={recipe.image_url || "/placeholder.jpg"}
+                  src={recipe.image_url || getAssetPath("/placeholder.jpg")}
                 />
                 <div className="absolute top-4 left-4">
                   <div className="bg-secondary-fixed/90 backdrop-blur-sm text-on-secondary-fixed px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">

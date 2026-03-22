@@ -6,6 +6,7 @@ import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { Recipe } from "@/lib/types";
 import DeleteModal from "@/components/DeleteModal";
+import { getAssetPath } from "@/lib/utils";
 
 function RecipeDetailContent() {
   const searchParams = useSearchParams();
@@ -200,10 +201,12 @@ function RecipeDetailContent() {
                 src={recipe.image_url}
               />
             ) : (
-              <div className="w-full h-[350px] bg-surface-container-high rounded-xl flex items-center justify-center">
-                <span className="material-symbols-outlined text-6xl text-outline">
-                  restaurant
-                </span>
+              <div className="w-full h-[350px] bg-surface-container-low rounded-xl flex items-center justify-center">
+                <img 
+                  src={getAssetPath("/placeholder.jpg")} 
+                  alt="Placeholder" 
+                  className="w-full h-full object-cover rounded-xl"
+                />
               </div>
             )}
           </div>
