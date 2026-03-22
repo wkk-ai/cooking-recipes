@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, FormEvent, useEffect, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { getAssetPath } from "@/lib/utils";
 
 interface IngredientRow {
   quantity: string;
@@ -239,7 +240,7 @@ function AddRecipeForm() {
             <div className="group relative aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden flex flex-col items-center justify-center border-2 border-dashed border-outline-variant/30 hover:border-primary/40 transition-all duration-300 cursor-pointer">
               {imagePreview ? (
                 <img
-                  src={imagePreview}
+                  src={getAssetPath(imagePreview)}
                   alt="Recipe preview"
                   className="w-full h-full object-cover"
                 />
@@ -489,8 +490,8 @@ function AddRecipeForm() {
           <div className="flex items-center gap-4">
             <button
               type="button"
-              onClick={() => router.push("/recipes")}
-              className="px-8 py-3 rounded-full font-label text-xs font-bold tracking-widest text-outline uppercase border border-outline-variant/40 hover:bg-surface-container-low transition-all"
+              onClick={() => router.push("/")}
+              className="px-8 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-colors rounded-full font-label tracking-wide uppercase text-sm font-bold"
             >
               Descartar
             </button>
