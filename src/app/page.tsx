@@ -243,7 +243,7 @@ export default function HomePage() {
                     />
                     <div className="absolute bottom-4 left-4">
                       <span className="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">
-                        {recipe.prep_time} Min
+                        {(recipe.prep_time || 0) + (recipe.cook_time || 0)} Min
                       </span>
                     </div>
                   </div>

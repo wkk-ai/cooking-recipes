@@ -273,16 +273,19 @@ function RecipeDetailContent() {
             )}
           </section>
 
-          {/* Back link */}
-          <div className="border-t border-outline-variant/30 pt-12">
-            <Link
-              href="/recipes"
-              className="text-primary font-bold flex items-center gap-2 hover:underline"
-            >
-              <span className="material-symbols-outlined">arrow_back</span>
-              Voltar para a Biblioteca
-            </Link>
-          </div>
+          {/* ─── Back to Library ─── */}
+      <h2 className="text-center font-headline text-2xl text-on-surface italic mt-24 mb-6">
+        Quer explorar mais?
+      </h2>
+      <div className="flex justify-center pb-24">
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-primary hover:text-primary-dark font-label text-lg font-bold transition-all hover:-translate-x-1"
+        >
+          <span className="material-symbols-outlined">arrow_back</span>
+          Voltar para a Biblioteca
+        </Link>
+      </div>
         </div>
       </div>
     </div>
