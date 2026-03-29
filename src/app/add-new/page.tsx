@@ -11,14 +11,11 @@ interface IngredientRow {
 }
 
 const categoryOptions = [
-  "Refeições Rápidas",
-  "Vegetariano",
-  "Confeitaria",
-  "Cozimento Lento",
+  "Carnes",
   "Pratos Principais",
-  "Saladas",
+  "Acompanhamentos",
   "Sobremesas",
-  "Sopas",
+  "Confeitaria",
 ];
 
 const difficultyOptions = ["Fácil", "Intermediário", "Avançado"];
