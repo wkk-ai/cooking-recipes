@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase";
+import { searchRecipeTitles } from "@/app/actions";
 
 interface RecipeSuggestion {
   id: string;
@@ -31,16 +31,9 @@ export default function NavBar() {
     }
 
     const fetchSuggestions = async () => {
-      const { data, error } = await supabase
-        .from("recipes")
-        .select("id, title")
-        .ilike("title", `%${searchQuery}%`)
-        .limit(5);
-
-      if (!error && data) {
-        setSuggestions(data);
-        setIsDropdownOpen(data.length > 0);
-      }
+      const data = await searchRecipeTitles(searchQuery);
+      setSuggestions(data);
+      setIsDropdownOpen(data.length > 0);
     };
 
     const timer = setTimeout(fetchSuggestions, 300);

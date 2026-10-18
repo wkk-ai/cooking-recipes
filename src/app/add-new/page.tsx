@@ -2,7 +2,7 @@
 
 import { useState, FormEvent, useEffect, Suspense } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { supabase } from "@/lib/supabase";
+import { getRecipe, saveRecipe } from "@/app/actions";
 import { getAssetPath } from "@/lib/utils";
 
 interface IngredientRow {
@@ -46,15 +46,12 @@ function AddRecipeForm() {
 
   useEffect(() => {
     if (idValue) {
+      const recipeId = idValue;
       async function fetchRecipe() {
-        const { data, error: fetchError } = await supabase
-          .from("recipes")
-          .select("*")
-          .eq("id", idValue)
-          .single();
+        const data = await getRecipe(recipeId);
 
-        if (fetchError) {
-          setError(`Erro ao carregar receita: ${fetchError.message}`);
+        if (!data) {
+          setError("Erro ao carregar receita: não encontrada");
           setFetching(false);
           return;
         }
@@ -135,73 +132,36 @@ function AddRecipeForm() {
     setSubmitting(true);
 
     try {
-      let imageUrl = "";
-
-      // Upload image if provided
+      let image: { name: string; base64: string } | undefined;
       if (imageFile) {
-        const fileExt = imageFile.name.split(".").pop();
-        const fileName = `${Date.now()}-${Math.random()
-          .toString(36)
-          .substring(2)}.${fileExt}`;
-
-        const { error: uploadError } = await supabase.storage
-          .from("recipe-images")
-          .upload(fileName, imageFile);
-
-        if (uploadError) {
-          throw new Error(`Falha no upload da imagem: ${uploadError.message}`);
-        }
-
-        const { data: urlData } = supabase.storage
-          .from("recipe-images")
-          .getPublicUrl(fileName);
-
-        imageUrl = urlData.publicUrl;
+        const bytes = new Uint8Array(await imageFile.arrayBuffer());
+        let binary = "";
+        for (const byte of bytes) binary += String.fromCharCode(byte);
+        image = { name: imageFile.name, base64: btoa(binary) };
       }
 
-      // Filter out empty ingredients and instructions
       const cleanIngredients = ingredients.filter(
         (i) => i.name.trim() || i.quantity.trim()
       );
       const cleanInstructions = instructions.filter((s) => s.trim());
 
-      // Save recipe (insert or update)
-      const recipeData = {
-        title: title.trim(),
-        description: description.trim(),
-        category,
-        difficulty,
-        prep_time: prepTime,
-        cook_time: cookTime,
-        servings,
-        image_url: imageUrl || imagePreview || "",
-        ingredients: cleanIngredients,
-        instructions: cleanInstructions,
-      };
+      const data = await saveRecipe(
+        {
+          title: title.trim(),
+          description: description.trim(),
+          category,
+          difficulty,
+          prep_time: prepTime,
+          cook_time: cookTime,
+          servings,
+          image_url: imagePreview?.startsWith("blob:") ? "" : imagePreview || "",
+          ingredients: cleanIngredients,
+          instructions: cleanInstructions,
+        },
+        idValue || undefined,
+        image
+      );
 
-      let result;
-      if (idValue) {
-        result = await supabase
-          .from("recipes")
-          .update(recipeData)
-          .eq("id", idValue)
-          .select()
-          .single();
-      } else {
-        result = await supabase
-          .from("recipes")
-          .insert(recipeData)
-          .select()
-          .single();
-      }
-
-      const { data, error: saveError } = result;
-
-      if (saveError) {
-        throw new Error(`Falha ao salvar a receita: ${saveError.message}`);
-      }
-
-      // Redirect to the new recipe
       router.push(`/recipes/view?id=${data.id}`);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Algo deu errado.");

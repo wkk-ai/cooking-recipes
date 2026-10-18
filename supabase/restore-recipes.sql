@@ -1,5 +1,5 @@
--- Recreates the recipes database from "Caderno de receita.pptx" (Sara de Sá).
--- Run once in the Supabase SQL editor of the new project.
+-- Recreates the recipes table from "Caderno de receita.pptx" (Sara de Sá).
+-- Plain Postgres (Neon). Photos stay as files in public/images/recipes.
 -- Unknown in the notebook: description, difficulty, prep_time (set to defaults).
 
 create table if not exists public.recipes (
@@ -16,24 +16,6 @@ create table if not exists public.recipes (
   ingredients jsonb not null default '[]'::jsonb,
   instructions jsonb not null default '[]'::jsonb
 );
-
-alter table public.recipes enable row level security;
-
-drop policy if exists recipes_public_all on public.recipes;
-create policy recipes_public_all on public.recipes
-  for all to anon, authenticated using (true) with check (true);
-
-insert into storage.buckets (id, name, public)
-values ('recipe-images', 'recipe-images', true)
-on conflict (id) do nothing;
-
-drop policy if exists recipe_images_public_read on storage.objects;
-create policy recipe_images_public_read on storage.objects
-  for select to anon, authenticated using (bucket_id = 'recipe-images');
-
-drop policy if exists recipe_images_public_upload on storage.objects;
-create policy recipe_images_public_upload on storage.objects
-  for insert to anon, authenticated with check (bucket_id = 'recipe-images');
 
 insert into public.recipes
   (title, description, category, difficulty, prep_time, cook_time, servings, image_url, ingredients, instructions)

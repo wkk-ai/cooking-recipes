@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase";
+import { deleteRecipe, listRecipes } from "@/app/actions";
 import { Recipe } from "@/lib/types";
 import DeleteModal from "@/components/DeleteModal";
 import { getAssetPath } from "@/lib/utils";
@@ -23,10 +23,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function fetchRecipes() {
-      const { data } = await supabase
-        .from("recipes")
-        .select("*")
-        .order("title", { ascending: true });
+      const data = await listRecipes();
         
       if (data) {
         setRecipes(data);
@@ -67,18 +64,9 @@ export default function HomePage() {
   const confirmDelete = async () => {
     if (!recipeToDelete) return;
     try {
-      const { error } = await supabase
-        .from("recipes")
-        .delete()
-        .eq("id", recipeToDelete.id);
-      
-      if (error) {
-        console.error("Error deleting recipe:", error);
-        alert("Falha ao deletar receita.");
-      } else {
-        setRecipes(recipes.filter(r => r.id !== recipeToDelete.id));
-        setFilteredRecipes(filteredRecipes.filter(r => r.id !== recipeToDelete.id));
-      }
+      await deleteRecipe(recipeToDelete.id);
+      setRecipes(recipes.filter(r => r.id !== recipeToDelete.id));
+      setFilteredRecipes(filteredRecipes.filter(r => r.id !== recipeToDelete.id));
     } catch (err) {
       console.error(err);
     } finally {

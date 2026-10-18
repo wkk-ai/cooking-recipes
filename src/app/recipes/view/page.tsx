@@ -3,7 +3,7 @@
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { supabase } from "@/lib/supabase";
+import { deleteRecipe, getRecipe } from "@/app/actions";
 import { Recipe } from "@/lib/types";
 import DeleteModal from "@/components/DeleteModal";
 import { getAssetPath } from "@/lib/utils";
@@ -21,12 +21,9 @@ function RecipeDetailContent() {
       setLoading(false);
       return;
     }
+    const recipeId = id;
     async function fetchRecipe() {
-      const { data } = await supabase
-        .from("recipes")
-        .select("*")
-        .eq("id", id)
-        .single();
+      const data = await getRecipe(recipeId);
       if (data) setRecipe(data);
       setLoading(false);
     }
@@ -34,12 +31,15 @@ function RecipeDetailContent() {
   }, [id]);
 
   const handleDelete = async () => {
-    const { error } = await supabase.from("recipes").delete().eq("id", id);
-
-    if (error) {
-      alert("Erro ao excluir a receita: " + error.message);
-    } else {
-      router.push("/recipes");
+    try {
+      if (!id) return;
+      await deleteRecipe(id);
+      router.push("/");
+    } catch (error) {
+      alert(
+        "Erro ao excluir a receita: " +
+          (error instanceof Error ? error.message : "falha")
+      );
     }
   };
 
