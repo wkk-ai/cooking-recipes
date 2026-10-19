@@ -143,11 +143,15 @@ export default function HomePage() {
             </div>
             <div className="w-full lg:w-2/5 order-1 lg:order-2 relative">
               <div className="absolute inset-0 bg-secondary/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
-              <img
-                alt={hero.title}
-                className="w-full h-[333px] object-cover rounded-xl shadow-sm transform lg:-rotate-2 relative z-10"
-                src={getAssetPath(hero.image_url || "/placeholder.jpg")}
-              />
+              {hero.image_url ? (
+                <img
+                  alt={hero.title}
+                  className="w-full h-[333px] object-cover rounded-xl shadow-sm transform lg:-rotate-2 relative z-10"
+                  src={getAssetPath(hero.image_url)}
+                />
+              ) : (
+                <div className="w-full h-[333px] rounded-xl bg-surface-container-low relative z-10" />
+              )}
             </div>
           </div>
         ) : null}
@@ -224,11 +228,13 @@ export default function HomePage() {
               <div key={recipe.id} className="group relative">
                 <Link href={`/recipes/view?id=${recipe.id}`}>
                   <div className="relative overflow-hidden rounded-xl aspect-[3/2] bg-surface-container-low mb-4">
-                    <img
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                      alt={recipe.title}
-                      src={getAssetPath(recipe.image_url || "/placeholder.jpg")}
-                    />
+                    {recipe.image_url ? (
+                      <img
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        alt={recipe.title}
+                        src={getAssetPath(recipe.image_url)}
+                      />
+                    ) : null}
                     <div className="absolute bottom-4 left-4">
                       <span className="px-3 py-1 bg-secondary text-on-secondary text-[10px] font-bold font-label uppercase tracking-widest rounded-full">
                         {(recipe.prep_time || 0) + (recipe.cook_time || 0)} Min

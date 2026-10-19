@@ -201,13 +201,7 @@ function RecipeDetailContent() {
                 src={getAssetPath(recipe.image_url)}
               />
             ) : (
-              <div className="w-full h-[350px] bg-surface-container-low rounded-xl flex items-center justify-center">
-                <img 
-                  src={getAssetPath("/placeholder.jpg")} 
-                  alt="Placeholder" 
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </div>
+              <div className="w-full h-[350px] bg-surface-container-low rounded-xl" />
             )}
           </div>
         </div>
