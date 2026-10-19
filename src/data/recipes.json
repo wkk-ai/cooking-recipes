@@ -236,6 +236,54 @@
     ]
   },
   {
+    "id": "0ade016b-a40f-46a5-959c-99fcf4596135",
+    "created_at": "2026-10-19T13:37:40.904Z",
+    "title": "Fraldinha com manteiga, alho e páprica",
+    "description": "",
+    "category": "Carnes",
+    "difficulty": "Fácil",
+    "prep_time": 10,
+    "cook_time": 20,
+    "servings": 4,
+    "image_url": "",
+    "ingredients": [
+      {
+        "name": "fraldinha",
+        "quantity": "1 kg"
+      },
+      {
+        "name": "manteiga",
+        "quantity": "50 g"
+      },
+      {
+        "name": "alho",
+        "quantity": "4 dentes"
+      },
+      {
+        "name": "páprica",
+        "quantity": "1 colher de sopa"
+      },
+      {
+        "name": "sal",
+        "quantity": "a gosto"
+      },
+      {
+        "name": "pimenta-do-reino",
+        "quantity": "a gosto"
+      },
+      {
+        "name": "azeite",
+        "quantity": "1 fio"
+      }
+    ],
+    "instructions": [
+      "Seque a fraldinha e tempere com sal, páprica e pimenta.",
+      "Aqueça uma frigideira com um fio de azeite e sele dos dois lados, até dourar.",
+      "Baixe o fogo, junte a manteiga e o alho amassado e regue a carne por uns 2 minutos.",
+      "Deixe descansar 5 minutos e fatie contra a fibra."
+    ]
+  },
+  {
     "id": "0da4838c-0af1-4e05-9bdf-d2ba8ebf9853",
     "created_at": "2026-10-18T18:31:01.261Z",
     "title": "Merengue",
@@ -303,6 +351,58 @@
       "Bater as gemas, os ovos, o açúcar e, por último, a farinha",
       "Adicione o chocolate derretido a mistura e bata até ficar homogêneo",
       "Asse no forno pré aquecido à 180° por 4 minutos"
+    ]
+  },
+  {
+    "id": "c6703efa-546c-411e-a371-504dd38fb4af",
+    "created_at": "2026-10-19T13:37:40.533Z",
+    "title": "Picanha na mostarda",
+    "description": "",
+    "category": "Carnes",
+    "difficulty": "Fácil",
+    "prep_time": 15,
+    "cook_time": 40,
+    "servings": 6,
+    "image_url": "/images/recipes/picanha-mostarda.png",
+    "ingredients": [
+      {
+        "name": "picanha com capa de gordura",
+        "quantity": "1 peça (cerca de 1,2 kg)"
+      },
+      {
+        "name": "mostarda",
+        "quantity": "3 colheres de sopa"
+      },
+      {
+        "name": "mostarda em grãos",
+        "quantity": "1 colher de sopa"
+      },
+      {
+        "name": "mel",
+        "quantity": "1 colher de sopa"
+      },
+      {
+        "name": "alho amassado",
+        "quantity": "3 dentes"
+      },
+      {
+        "name": "azeite",
+        "quantity": "2 colheres de sopa"
+      },
+      {
+        "name": "sal",
+        "quantity": "a gosto"
+      },
+      {
+        "name": "pimenta-do-reino",
+        "quantity": "a gosto"
+      }
+    ],
+    "instructions": [
+      "Tire a picanha da geladeira 30 minutos antes. Faça cortes na capa de gordura, sem chegar na carne.",
+      "Misture a mostarda, a mostarda em grãos, o mel, o alho, o azeite, o sal e a pimenta. Espalhe por toda a peça.",
+      "Asse com a gordura para cima, em forno pré-aquecido a 200°, por cerca de 40 minutos, até o centro ficar rosado.",
+      "Deixe descansar 10 minutos e fatie contra a fibra."
     ]
   },
   {
