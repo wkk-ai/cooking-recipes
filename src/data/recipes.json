@@ -1,0 +1,567 @@
+[
+  {
+    "id": "155ccf22-5a5a-4368-92e0-410274051492",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Bolachinha",
+    "description": "",
+    "category": "Confeitaria",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 15,
+    "servings": 0,
+    "image_url": "/images/recipes/bolachinha.png",
+    "ingredients": [
+      {
+        "name": "açúcar refinado",
+        "quantity": "100g"
+      },
+      {
+        "name": "margarina (70% de gordura)",
+        "quantity": "200g"
+      },
+      {
+        "name": "farinha",
+        "quantity": "300g"
+      }
+    ],
+    "instructions": [
+      "Misturar todos os ingredientes (não mexer muito para não endurecer)",
+      "Bolear e amassar com um garfo",
+      "Assar no forno pré aquecido à 180° por 12 a 15 minutos"
+    ]
+  },
+  {
+    "id": "0f57fe8b-62bf-4816-aecb-bc46493bf2bf",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Bolo formigueiro",
+    "description": "",
+    "category": "Confeitaria",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 30,
+    "servings": 2,
+    "image_url": "/images/recipes/bolo_formigueiro.png",
+    "ingredients": [
+      {
+        "name": "ovos",
+        "quantity": "4"
+      },
+      {
+        "name": "açúcar (300g)",
+        "quantity": "1,5 copos"
+      },
+      {
+        "name": "farinha (280g)",
+        "quantity": "2 copos"
+      },
+      {
+        "name": "margarina (70% de gordura)",
+        "quantity": "200g"
+      },
+      {
+        "name": "coco ralado",
+        "quantity": "100g"
+      },
+      {
+        "name": "fermento",
+        "quantity": "1 colher de sopa"
+      },
+      {
+        "name": "leite (240 ml)",
+        "quantity": "1 copo"
+      },
+      {
+        "name": "granulado",
+        "quantity": "150g"
+      },
+      {
+        "name": "Rum",
+        "quantity": ""
+      },
+      {
+        "name": "Leite condensado",
+        "quantity": ""
+      }
+    ],
+    "instructions": [
+      "Bater o açúcar e margarina até emulsificar",
+      "Acrescentar gema e bater",
+      "Misturar coco, farinha e fermento  bater na massa apenas para incorporar. Ir acrescentando aos poucos o leite",
+      "Acrescentar o granulado, apenas juntar",
+      "Colar a clara em neve (clara do avo batida)  mexer na mão",
+      "Assar no forno pré aquecido à 160° por 30 min",
+      "Ao desenformar, regar com rum misturado com leite condensado.",
+      "Rende 2 bolos"
+    ]
+  },
+  {
+    "id": "d5744b86-4136-4294-88f2-c2070ea8f8b4",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Brownie",
+    "description": "",
+    "category": "Confeitaria",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 30,
+    "servings": 0,
+    "image_url": "/images/recipes/brownie.png",
+    "ingredients": [
+      {
+        "name": "chocolate meio amargo",
+        "quantity": "150g"
+      },
+      {
+        "name": "chocolate amargo",
+        "quantity": "50g"
+      },
+      {
+        "name": "manteiga sem sal",
+        "quantity": "100g"
+      },
+      {
+        "name": "chocolate em pó",
+        "quantity": "18g"
+      },
+      {
+        "name": "açúcar",
+        "quantity": "280g"
+      },
+      {
+        "name": "ovos",
+        "quantity": "3"
+      },
+      {
+        "name": "extrato de baunilha",
+        "quantity": "10 ml"
+      },
+      {
+        "name": "farinha",
+        "quantity": "225g"
+      }
+    ],
+    "instructions": [
+      "Derreta em banho maria os chocolates com a manteiga",
+      "Adicione o chocolate em pó e misture",
+      "Em outra vasilha, colocar os ovos, açúcar e extrato de baunilha, mexer até o açúcar dissolver",
+      "Adicione a mistura do chocolate derretido, misture tudo e acrescente a farinha até ela sumir",
+      "Assar em forno pré aquecido à 180° por 30 minutos"
+    ]
+  },
+  {
+    "id": "aebf83a7-826c-42ac-8eb5-db5a8f836038",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Cookies chocotudo",
+    "description": "",
+    "category": "Confeitaria",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 10,
+    "servings": 0,
+    "image_url": "/images/recipes/cookies_chocotudo.png",
+    "ingredients": [
+      {
+        "name": "açúcar refinado",
+        "quantity": "120g"
+      },
+      {
+        "name": "açúcar mascavo",
+        "quantity": "120g"
+      },
+      {
+        "name": "margaria (70% de gordura)",
+        "quantity": "100g"
+      },
+      {
+        "name": "ovo",
+        "quantity": "1"
+      },
+      {
+        "name": "farinha de trigo",
+        "quantity": "270g"
+      },
+      {
+        "name": "fermento em pó (bicabornato)",
+        "quantity": "1 colher de chá"
+      },
+      {
+        "name": "Baunilha",
+        "quantity": "2 gotas"
+      },
+      {
+        "name": "chocolate picado",
+        "quantity": "200g"
+      }
+    ],
+    "instructions": [
+      "Bata a manteiga, o açúcar e o açúcar mascavo até virar um creme fofo e leve (até emulsionar). Adicione o ovo.",
+      "Junte a farinha, fermento e baunilha, bata apenas até misturar. Junte o chocolate, apenas para incorporar na massa.",
+      "Bolei e asse no forno pré aquecido à 170° por aproximadamente 10 minutos.",
+      "(mesmo se for assar na hora, esperar gelar um pouco os cookies)"
+    ]
+  },
+  {
+    "id": "9bb659c2-bb5e-44e4-baac-78e442096217",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Dadinho de tapioca",
+    "description": "",
+    "category": "Acompanhamentos",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 15,
+    "servings": 0,
+    "image_url": "/images/recipes/dadinho_tapioca.jpg",
+    "ingredients": [
+      {
+        "name": "tapioca granulada",
+        "quantity": "250g"
+      },
+      {
+        "name": "queijo coalho",
+        "quantity": "250g"
+      },
+      {
+        "name": "leite integral",
+        "quantity": "500ml"
+      },
+      {
+        "name": "Sal a gosto",
+        "quantity": ""
+      }
+    ],
+    "instructions": [
+      "Ferver o leite com o sal",
+      "Despejar sobre a tapioca misturada com o queijo coalho ralado grosso",
+      "Colocar em uma assadeira forrada com plástico e levar à geladeira (ou frízer) para que fique bem firme",
+      "Cortar em quadradinho e fritar em óleo quente ou assar em forma untada à 200° por 10 a 15 min"
+    ]
+  },
+  {
+    "id": "0da4838c-0af1-4e05-9bdf-d2ba8ebf9853",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Merengue",
+    "description": "",
+    "category": "Confeitaria",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 0,
+    "servings": 0,
+    "image_url": "/images/recipes/merengue.jpg",
+    "ingredients": [
+      {
+        "name": "ovos",
+        "quantity": "3"
+      },
+      {
+        "name": "açúcar (200g)",
+        "quantity": "1 xícara"
+      }
+    ],
+    "instructions": [
+      "Aquecer as claras com o açúcar em uma panela, mexer até amornar e desaparecer as bolinhas de açúcar (60° - conseguir manter o dedo na panela)",
+      "Levar para a batedeira e bater por uns 30 min"
+    ]
+  },
+  {
+    "id": "c1c37ae5-22e0-4d63-b86c-af49bb98b206",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Petit gâteau",
+    "description": "",
+    "category": "Sobremesas",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 4,
+    "servings": 0,
+    "image_url": "/images/recipes/petit_gateau.png",
+    "ingredients": [
+      {
+        "name": "manteiga sem sal",
+        "quantity": "250g"
+      },
+      {
+        "name": "chocolate meio amargo",
+        "quantity": "300g"
+      },
+      {
+        "name": "gemas",
+        "quantity": "5"
+      },
+      {
+        "name": "ovos inteiros",
+        "quantity": "5"
+      },
+      {
+        "name": "açúcar",
+        "quantity": "170g"
+      },
+      {
+        "name": "farinha de trigo",
+        "quantity": "100g"
+      }
+    ],
+    "instructions": [
+      "Derreter a manteiga e o chocolate no micro-ondas",
+      "Bater as gemas, os ovos, o açúcar e, por último, a farinha",
+      "Adicione o chocolate derretido a mistura e bata até ficar homogêneo",
+      "Asse no forno pré aquecido à 180° por 4 minutos"
+    ]
+  },
+  {
+    "id": "62f1c2c8-de4f-4e0f-85da-5bcee714182a",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Pizza",
+    "description": "",
+    "category": "Pratos Principais",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 7,
+    "servings": 0,
+    "image_url": "/images/recipes/pizza.jpg",
+    "ingredients": [
+      {
+        "name": "farinha de trigo",
+        "quantity": "500g"
+      },
+      {
+        "name": "azeite",
+        "quantity": "25g"
+      },
+      {
+        "name": "açúcar",
+        "quantity": "15g"
+      },
+      {
+        "name": "sal",
+        "quantity": "10g"
+      },
+      {
+        "name": "fermento granulado (biológico)",
+        "quantity": "5g"
+      },
+      {
+        "name": "água",
+        "quantity": "250g a 255g"
+      }
+    ],
+    "instructions": [
+      "Colocar todos os ingredientes na batedeira (colocar primeiro a água)",
+      "Bater até obter ponto de véu",
+      "Deixar a massa descansar por 1 hora",
+      "Dividir a massa nos tamanhos desejados deixar descansar em bolinha por 30 min",
+      "Abrir a massa com os dedos, colocar recheio",
+      "Assar no forno pré aquecido à 250° por 7 minutos"
+    ]
+  },
+  {
+    "id": "6e527e0d-24fe-458d-81ba-5116a3fe6f22",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Polpetone",
+    "description": "",
+    "category": "Carnes",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 0,
+    "servings": 0,
+    "image_url": "/images/recipes/polpetone.jpg",
+    "ingredients": [
+      {
+        "name": "carne moída",
+        "quantity": "1kg"
+      },
+      {
+        "name": "farinha de rosca",
+        "quantity": "94g"
+      },
+      {
+        "name": "molho de tomate",
+        "quantity": "94ml"
+      },
+      {
+        "name": "óleo",
+        "quantity": "15ml"
+      },
+      {
+        "name": "ovo",
+        "quantity": "1"
+      },
+      {
+        "name": "sal",
+        "quantity": "0,5 colher de sopa"
+      },
+      {
+        "name": "cebola",
+        "quantity": "125g"
+      },
+      {
+        "name": "Queijo",
+        "quantity": ""
+      }
+    ],
+    "instructions": [
+      "Misturar todos os ingredientes",
+      "Modelar deixando um cubo de queijo no meio",
+      "Assar"
+    ]
+  },
+  {
+    "id": "73411556-fb33-4df7-b6bf-af1b3987bcb6",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Pudim",
+    "description": "",
+    "category": "Sobremesas",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 90,
+    "servings": 0,
+    "image_url": "/images/recipes/pudim.png",
+    "ingredients": [
+      {
+        "name": "ovos",
+        "quantity": "4"
+      },
+      {
+        "name": "leite condensado",
+        "quantity": "1 lata"
+      },
+      {
+        "name": "leite (mesma do leite condensado)",
+        "quantity": "2 latas"
+      },
+      {
+        "name": "Calda:",
+        "quantity": ""
+      },
+      {
+        "name": "açúcar",
+        "quantity": "1 xícara"
+      },
+      {
+        "name": "água",
+        "quantity": "1 xícara"
+      }
+    ],
+    "instructions": [
+      "Bater todos os ingredientes no liquidificador.",
+      "Calda: Na forma que for fazer o pudim, derreter o açúcar (ficar mexendo sem parar). – depois, jogar 1 copo de água fervida.",
+      "Jogar por cima da calda a mistura. Colocar no banho maria e tampar com um papel alumínio.",
+      "Forno do fogão no máximo por 1h30."
+    ]
+  },
+  {
+    "id": "c82b75c3-3521-4249-b6ba-ae1e7e6529e2",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Suspiros",
+    "description": "",
+    "category": "Confeitaria",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 60,
+    "servings": 0,
+    "image_url": "/images/recipes/suspiros.jpg",
+    "ingredients": [
+      {
+        "name": "ovos",
+        "quantity": "2"
+      },
+      {
+        "name": "açúcar",
+        "quantity": "100g"
+      }
+    ],
+    "instructions": [
+      "Bata a clara do ovo por 7 minutos (2 em velocidade baixa e os 5 em maior velocidade) – quando levantar o batedor, a clara não vai se desprender",
+      "Continuar batendo em velocidade alta e ir adicionar o açúcar aos poucos, uma colher por vez, até usar todo o açúcar",
+      "Asse em um forno pré aquecido em uma temperatura baixa, deixe assar por aproximadamente 1 hora com a porta do forno entreaberta"
+    ]
+  },
+  {
+    "id": "f41f7343-ad7b-4f6b-a856-0b49aa529971",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Torta de limão",
+    "description": "",
+    "category": "Sobremesas",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 0,
+    "servings": 0,
+    "image_url": "/images/recipes/torta_limao.jpg",
+    "ingredients": [
+      {
+        "name": "Massa sablée",
+        "quantity": ""
+      },
+      {
+        "name": "farinha",
+        "quantity": "200g"
+      },
+      {
+        "name": "manteiga sem sal",
+        "quantity": "100g"
+      },
+      {
+        "name": "açúcar de confeiteiro",
+        "quantity": "100g"
+      },
+      {
+        "name": "ovo",
+        "quantity": "1"
+      },
+      {
+        "name": "Recheio",
+        "quantity": ""
+      },
+      {
+        "name": "leite condensado",
+        "quantity": "400g"
+      },
+      {
+        "name": "creme de leite",
+        "quantity": "150g"
+      },
+      {
+        "name": "limão",
+        "quantity": "100ml"
+      }
+    ],
+    "instructions": [
+      "Misture a farinha com o açúcar, acrescente a manteiga em temperatura ambiente e por fim, adicione o ovo. Deixe descansar por 30 min na geladeira e depois pode abrir e usar a massa.",
+      "Moldar a massa, furar com um garfo e assar em forno pré aquecido a 180°",
+      "Misturar os ingredientes em uma vasilha e bater com o fuet",
+      "Despejar sobre o fundo da massa assada",
+      "Enfeitar com o merengue e dourar no forno"
+    ]
+  },
+  {
+    "id": "ef3b0c38-6f7f-43b0-b0ee-34e99e58aafb",
+    "created_at": "2026-10-18T18:31:01.261Z",
+    "title": "Torta neutra de guaraná",
+    "description": "",
+    "category": "Pratos Principais",
+    "difficulty": "Fácil",
+    "prep_time": 0,
+    "cook_time": 40,
+    "servings": 1,
+    "image_url": "/images/recipes/torta_guarana.jpg",
+    "ingredients": [
+      {
+        "name": "farinha de trigo",
+        "quantity": "200g"
+      },
+      {
+        "name": "margarina",
+        "quantity": "100g"
+      },
+      {
+        "name": "guaraná",
+        "quantity": "60ml"
+      }
+    ],
+    "instructions": [
+      "Misturar a farinha e margarina",
+      "Acrescentar o guaraná até dar o ponto",
+      "Descansar na geladeira por 15 min",
+      "Abrir com rolo, espessura fina e forrar a assadeira. Rechear e cobrir com a outra parte da massa, pincelar e assar",
+      "Assar em forno pré aquecido por 30 a 40 min",
+      "Rende 1 torta"
+    ]
+  }
+]

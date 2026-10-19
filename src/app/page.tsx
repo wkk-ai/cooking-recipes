@@ -68,7 +68,7 @@ export default function HomePage() {
       setRecipes(recipes.filter(r => r.id !== recipeToDelete.id));
       setFilteredRecipes(filteredRecipes.filter(r => r.id !== recipeToDelete.id));
     } catch (err) {
-      console.error(err);
+      alert(err instanceof Error ? err.message : "Falha ao deletar receita.");
     } finally {
       setIsDeleteModalOpen(false);
       setRecipeToDelete(null);
